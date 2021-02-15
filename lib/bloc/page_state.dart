@@ -1,0 +1,157 @@
+part of 'page_bloc.dart';
+
+abstract class PageState extends Equatable {
+  const PageState();
+}
+
+class OnInitialPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnLoginPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnSplashPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMainPage extends PageState {
+  final int bottomNavBarIndex;
+  final bool isExpired;
+  OnMainPage({this.bottomNavBarIndex = 0, this.isExpired = false});
+  @override
+  List<Object> get props => [bottomNavBarIndex, isExpired];
+}
+
+class OnRegistrationPage extends PageState {
+  final RegistrationData registrationData;
+
+  OnRegistrationPage(this.registrationData);
+  @override
+  List<Object> get props => [];
+}
+
+class OnAccountConfirmationPage extends PageState {
+  final RegistrationData registrationData;
+
+  OnAccountConfirmationPage(this.registrationData);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
+
+class OnPreferencePage extends PageState {
+  final RegistrationData registrationData;
+
+  OnPreferencePage(this.registrationData);
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
+
+class OnMovieDetailPage extends PageState {
+  final Movie movie;
+  OnMovieDetailPage(this.movie);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [movie];
+}
+
+class OnSelectSchedulePage extends PageState {
+  final MovieDetail movieDetail;
+  OnSelectSchedulePage(this.movieDetail);
+  @override
+  // TODO: implement props
+  List<Object> get props => [movieDetail];
+}
+
+class OnSelectSeatPage extends PageState {
+  final Ticket ticket;
+  OnSelectSeatPage(this.ticket);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [ticket];
+}
+
+class OnCheckoutPage extends PageState {
+  final Ticket ticket;
+  OnCheckoutPage(this.ticket);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [ticket];
+}
+
+class OnSuccessPage extends PageState {
+  final Ticket ticket;
+  final FlutixTransaction flutixTransaction;
+  final PageEvent pageEvent;
+  OnSuccessPage(this.ticket, this.flutixTransaction, {this.pageEvent});
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [ticket, flutixTransaction];
+}
+
+class OnTicketDetailPage extends PageState {
+  final Ticket ticket;
+  final PageEvent pageEvent;
+  OnTicketDetailPage(this.ticket, {this.pageEvent});
+  @override
+  // TODO: implement props
+  List<Object> get props => [ticket];
+}
+
+class OnProfilePage extends PageState {
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
+
+class OnEditProfilePage extends PageState {
+  final Users users;
+  OnEditProfilePage(this.users);
+  @override
+  // TODO: implement props
+  List<Object> get props => [users];
+}
+
+class OnTopUpPage extends PageState {
+  final PageEvent pageEvent;
+  OnTopUpPage(this.pageEvent);
+  @override
+  // TODO: implement props
+  List<Object> get props => [pageEvent];
+}
+
+class OnWalletPage extends PageState {
+  final PageEvent pageEvent;
+  OnWalletPage(this.pageEvent);
+  @override
+  // TODO: implement props
+  List<Object> get props => [pageEvent];
+}
+
+class OnComingSoonDetailPage extends PageState {
+  final Movie movie;
+  final MovieDetail movieDetail;
+  final List<Credit> credits;
+  OnComingSoonDetailPage(this.movie, {this.movieDetail, this.credits});
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [movie];
+}
+
+class OnTicketToday extends PageState {
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
